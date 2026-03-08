@@ -38,7 +38,7 @@ def run_experiment(pattern: Pattern, exp_num: int) -> list[TrainResult]:
         result = train_and_evaluate(clf, pattern.data, pattern.name)
         results.append(result)
 
-        safe_clf = clf.name.replace(" ", "_").replace("/", "-").replace("(", "").replace(")", "")
+        safe_clf = type(clf).__name__  # ASCII-имя класса
         img_path = OUT_DIR / f"exp{exp_num}_{safe_clf}.png"
         plot_decision_boundary(result, pattern, img_path)
 

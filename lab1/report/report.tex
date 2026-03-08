@@ -23,17 +23,6 @@
 \usepackage{longtable}
 \usepackage{multirow}
 
-% --- листинги кода (minted) ---
-\usepackage{minted}
-\usemintedstyle{friendly}
-\setminted{
-  fontsize=\small,
-  linenos=true,
-  breaklines=true,
-  frame=single,
-  framesep=4pt,
-}
-
 % --- гиперссылки ---
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
@@ -57,7 +46,6 @@
     \textbf{МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}\\[2pt]
     \textbf{БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}\\[2pt]
     \textbf{ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}\\[2pt]
-    Кафедра математического моделирования и анализа данных
   \end{center}
 
   \vspace{2cm}
@@ -70,9 +58,10 @@
   \vspace{3cm}
 
   \begin{flushright}
-    \textbf{Вариант:} 4\\[6pt]
-    \textbf{Выполнил:} студент \underline{\hspace{4cm}} группы\\[4pt]
-    \underline{\hspace{7cm}}\\[4pt]
+    \textbf{Выполнили:} студенты 3 группы кафедры БМИ\\[4pt]
+    Кондратёнок Владимир\\[4pt]
+    Волковец Дмитрий\\[4pt]
+    Наумович Михаил\\[10pt]
     \textbf{Проверил:} \underline{\hspace{7cm}}
   \end{flushright}
 
@@ -174,30 +163,7 @@ lab1/
 \end{itemize}
 
 % ============================================================
-% 4. Листинг кода
-% ============================================================
-\section*{Листинг кода}
-
-\subsection*{core/data\_manager.py}
-\inputminted{python}{../core/data_manager.py}
-
-\subsection*{core/classifiers.py}
-\inputminted{python}{../core/classifiers.py}
-
-\subsection*{core/trainer.py}
-\inputminted{python}{../core/trainer.py}
-
-\subsection*{patterns.py}
-\inputminted{python}{../patterns.py}
-
-\subsection*{visualizer.py}
-\inputminted{python}{../visualizer.py}
-
-\subsection*{main.py}
-\inputminted{python}{../main.py}
-
-% ============================================================
-% 5. Паттерны и карты решений
+% 4. Паттерны и карты решений
 % ============================================================
 \section*{Паттерны и карты решений}
 
@@ -210,12 +176,12 @@ lab1/
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp1_SVM_линейное.png}
+    \includegraphics[width=\textwidth]{../output/exp1_SVMLinearWrapper.png}
     \caption{SVM (линейное)}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp1_Random_Forest.png}
+    \includegraphics[width=\textwidth]{../output/exp1_RFWrapper.png}
     \caption{Random Forest}
   \end{subfigure}
   \caption{Паттерн 1: линейно разделимый}
@@ -226,12 +192,12 @@ lab1/
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp2_SVM_линейное.png}
+    \includegraphics[width=\textwidth]{../output/exp2_SVMLinearWrapper.png}
     \caption{SVM (линейное)}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp2_Random_Forest.png}
+    \includegraphics[width=\textwidth]{../output/exp2_RFWrapper.png}
     \caption{Random Forest}
   \end{subfigure}
   \caption{Паттерн 2: синусоидальная граница}
@@ -242,12 +208,12 @@ lab1/
 \begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp3_SVM_линейное.png}
+    \includegraphics[width=\textwidth]{../output/exp3_SVMLinearWrapper.png}
     \caption{SVM (линейное)}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{../output/exp3_Random_Forest.png}
+    \includegraphics[width=\textwidth]{../output/exp3_RFWrapper.png}
     \caption{Random Forest}
   \end{subfigure}
   \caption{Паттерн 3: существенное перекрытие классов}
